@@ -1,4 +1,4 @@
-# branching
+# Домашнее задание к занятию «Ветвления в Git»
 
 ![git1-1](https://github.com/user-attachments/assets/71d71909-0ee3-41d1-be14-63796d49e880)
 
