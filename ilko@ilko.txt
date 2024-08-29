@@ -1,0 +1,248 @@
+ilko@ilko-VirtualBox:~/git1/branching$ git add merge.sh 
+ilko@ilko-VirtualBox:~/git1/branching$ git add rebase.sh
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'prepare for merge and rebase'
+[main 8dfe624] prepare for merge and rebase
+ 2 files changed, 9 insertions(+)
+ create mode 100644 merge.sh
+ create mode 100644 rebase.sh
+ilko@ilko-VirtualBox:~/git1/branching$ git push
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (4/4), готово.
+Запись объектов: 100% (4/4), 559 байтов | 559.00 КиБ/с, готово.
+Всего 4 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+To https://github.com/Skrypnikoviv/branching.git
+   e294dcd..8dfe624  main -> main
+ilko@ilko-VirtualBox:~/git1/branching$ git checkout -b git-merge
+Переключено на новую ветку «git-merge»
+ilko@ilko-VirtualBox:~/git1/branching$ git add merge.sh
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'merge: @ instead *'
+[git-merge dbeee45] merge: @ instead *
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git push
+fatal: The current branch git-merge has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin git-merge
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+ilko@ilko-VirtualBox:~/git1/branching$ git push --set-upstream origin git-merge
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 362 байта | 362.00 КиБ/с, готово.
+Всего 3 (изменений 1), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'git-merge' on GitHub by visiting:
+remote:      https://github.com/Skrypnikoviv/branching/pull/new/git-merge
+remote: 
+To https://github.com/Skrypnikoviv/branching.git
+ * [new branch]      git-merge -> git-merge
+branch 'git-merge' set up to track 'origin/git-merge'.
+ilko@ilko-VirtualBox:~/git1/branching$ git add merge.sh 
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'merge: use shift'
+[git-merge 74d2701] merge: use shift
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git push
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 431 байт | 431.00 КиБ/с, готово.
+Всего 3 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+To https://github.com/Skrypnikoviv/branching.git
+   dbeee45..74d2701  git-merge -> git-merge
+ilko@ilko-VirtualBox:~/git1/branching$ git checkout main
+Переключено на ветку «main»
+Ваша ветка обновлена в соответствии с «origin/main».
+ilko@ilko-VirtualBox:~/git1/branching$ git add rebase.sh 
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'изменения в main'
+[main ddc1c51] изменения в main
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git push
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 328 байтов | 328.00 КиБ/с, готово.
+Всего 3 (изменений 2), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Skrypnikoviv/branching.git
+   8dfe624..ddc1c51  main -> main
+ilko@ilko-VirtualBox:~/git1/branching$ git log
+commit ddc1c51c3e639eec34a05e0d0670c776dae6d7c0 (HEAD -> main, origin/main, origin/HEAD)
+Author: skrypnikoviv <k30ail@gmail.com>
+Date:   Thu Aug 29 20:42:11 2024 +1000
+
+    изменения в main
+
+commit 8dfe624ed973cab1881a1d8dcbcf4ed9e3d7464b
+Author: skrypnikoviv <k30ail@gmail.com>
+Date:   Thu Aug 29 20:26:36 2024 +1000
+
+    prepare for merge and rebase
+
+commit e294dcd841988156d305236c80bad31cd58f7a6a
+Author: Skrypnikoviv <162264420+Skrypnikoviv@users.noreply.github.com>
+Date:   Thu Aug 29 20:22:09 2024 +1000
+
+    Initial commit
+ilko@ilko-VirtualBox:~/git1/branching$ git checkout 8dfe624ed973cab1881a1d8dcbcf4ed9e3d7464b
+Примечание: переключение на «8dfe624ed973cab1881a1d8dcbcf4ed9e3d7464b».
+
+Вы сейчас в состоянии «отсоединённого указателя HEAD». Можете осмотреться,
+внести экспериментальные изменения и зафиксировать их, также можете
+отменить любые коммиты, созданные в этом состоянии, не затрагивая другие
+ветки, переключившись обратно на любую ветку.
+
+Если хотите создать новую ветку для сохранения созданных коммитов, можете
+сделать это (сейчас или позже), используя команду switch с параметром -c.
+Например:
+
+  git switch -c <новая-ветка>
+
+Или отмените эту операцию с помощью:
+
+  git switch -
+
+Отключите этот совет, установив переменную конфигурации
+advice.detachedHead в значение false
+
+HEAD сейчас на 8dfe624 prepare for merge and rebase
+ilko@ilko-VirtualBox:~/git1/branching$ git switch -c git-rebase
+Переключено на новую ветку «git-rebase»
+ilko@ilko-VirtualBox:~/git1/branching$ git add rebase.sh
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'git-rebase 1'
+[git-rebase abb7a8e] git-rebase 1
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'git-rebase 2'
+На ветке git-rebase
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git restore <файл>...», чтобы отменить изменения в рабочем каталоге)
+	изменено:      rebase.sh
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+ilko@ilko-VirtualBox:~/git1/branching$ git add rebase.sh
+ilko@ilko-VirtualBox:~/git1/branching$ git commit -m 'git-rebase 2'
+[git-rebase ceb48cb] git-rebase 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git push --set-upstream origin git-rebase
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 8, готово.
+Подсчет объектов: 100% (8/8), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (6/6), готово.
+Запись объектов: 100% (6/6), 600 байтов | 600.00 КиБ/с, готово.
+Всего 6 (изменений 3), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'git-rebase' on GitHub by visiting:
+remote:      https://github.com/Skrypnikoviv/branching/pull/new/git-rebase
+remote: 
+To https://github.com/Skrypnikoviv/branching.git
+ * [new branch]      git-rebase -> git-rebase
+branch 'git-rebase' set up to track 'origin/git-rebase'.
+ilko@ilko-VirtualBox:~/git1/branching$ git checkout main
+Переключено на ветку «main»
+Ваша ветка обновлена в соответствии с «origin/main».
+ilko@ilko-VirtualBox:~/git1/branching$ git marge 
+.git/      merge.sh   README.md  rebase.sh  
+ilko@ilko-VirtualBox:~/git1/branching$ git merge git-merge
+Merge made by the 'ort' strategy.
+ merge.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git push
+Username for 'https://github.com': Skrypnikoviv 
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 4, готово.
+Подсчет объектов: 100% (4/4), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (2/2), готово.
+Запись объектов: 100% (2/2), 280 байтов | 280.00 КиБ/с, готово.
+Всего 2 (изменений 1), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Skrypnikoviv/branching.git
+   ddc1c51..5fa4823  main -> main
+ilko@ilko-VirtualBox:~/git1/branching$ git checkout git-rebase
+Переключено на ветку «git-rebase»
+Ваша ветка обновлена в соответствии с «origin/git-rebase».
+ilko@ilko-VirtualBox:~/git1/branching$ git rebase main
+Автослияние rebase.sh
+КОНФЛИКТ (содержимое): Конфликт слияния в rebase.sh
+error: не удалось применить коммит abb7a8e… git-rebase 1
+подсказка: Resolve all conflicts manually, mark them as resolved with
+подсказка: "git add/rm <conflicted_files>", then run "git rebase --continue".
+подсказка: You can instead skip this commit: run "git rebase --skip".
+подсказка: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Не удалось применить коммит abb7a8e... git-rebase 1
+ilko@ilko-VirtualBox:~/git1/branching$ git add rebase.sh 
+ilko@ilko-VirtualBox:~/git1/branching$ git rebase --continue
+Автослияние rebase.sh
+КОНФЛИКТ (содержимое): Конфликт слияния в rebase.sh
+error: не удалось применить коммит ceb48cb… git-rebase 2
+подсказка: Resolve all conflicts manually, mark them as resolved with
+подсказка: "git add/rm <conflicted_files>", then run "git rebase --continue".
+подсказка: You can instead skip this commit: run "git rebase --skip".
+подсказка: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Не удалось применить коммит ceb48cb... git-rebase 2
+ilko@ilko-VirtualBox:~/git1/branching$ git add rebase.sh 
+ilko@ilko-VirtualBox:~/git1/branching$ git rebase --continue
+[отделённый HEAD bddaa78] git-rebase 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Успешно перемещён и обновлён refs/heads/git-rebase.
+ilko@ilko-VirtualBox:~/git1/branching$ git push -u origin git-rebase
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+To https://github.com/Skrypnikoviv/branching.git
+ ! [rejected]        git-rebase -> git-rebase (non-fast-forward)
+error: не удалось отправить некоторые ссылки в «https://github.com/Skrypnikoviv/branching.git»
+подсказка: Обновления были отклонены, так как верхушка вашей текущей ветки
+подсказка: позади ее внешней части. Заберите и слейте внешние изменения 
+подсказка: (например, с помощью «git pull …») перед повторной попыткой отправки
+подсказка: изменений.
+подсказка: Для дополнительной информации, смотрите «Note about fast-forwards»
+подсказка: в «git push --help».
+ilko@ilko-VirtualBox:~/git1/branching$ git push -u origin git-rebase -f
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 303 байта | 303.00 КиБ/с, готово.
+Всего 3 (изменений 2), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Skrypnikoviv/branching.git
+ + ceb48cb...bddaa78 git-rebase -> git-rebase (forced update)
+branch 'git-rebase' set up to track 'origin/git-rebase'.
+ilko@ilko-VirtualBox:~/git1/branching$ git checkout main
+Переключено на ветку «main»
+Ваша ветка обновлена в соответствии с «origin/main».
+ilko@ilko-VirtualBox:~/git1/branching$ git merge git-rebase
+Обновление 5fa4823..bddaa78
+Fast-forward
+ rebase.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ilko@ilko-VirtualBox:~/git1/branching$ git push 
+Username for 'https://github.com': Skrypnikoviv
+Password for 'https://Skrypnikoviv@github.com': 
+Всего 0 (изменений 0), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+To https://github.com/Skrypnikoviv/branching.git
+   5fa4823..bddaa78  main -> main
+ilko@ilko-VirtualBox:~/git1/branching$ 
